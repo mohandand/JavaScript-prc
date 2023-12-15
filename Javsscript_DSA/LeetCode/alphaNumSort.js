@@ -8,7 +8,7 @@ function inPlaceOrder(inputString) {
         const char = strArray[i];
 
         if (isUpperCase(char)) {
-            // Swap current character with the character at capitalIndex
+            // Swap current character with the character at capitalInde
             [strArray[i], strArray[capitalIndex]] = [strArray[capitalIndex], strArray[i]];
             capitalIndex++;
         } else if (isLowerCase(char)) {
