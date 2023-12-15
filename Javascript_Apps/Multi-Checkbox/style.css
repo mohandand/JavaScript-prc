@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 60%;
+    position:relative
+}
+.input-box{
+    width: 40%; 
+    margin: 8px;
+}
+.options-div{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 40%;
+    margin: 8px;
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
