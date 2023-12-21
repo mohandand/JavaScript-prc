@@ -8,7 +8,7 @@ function inPlaceOrder(inputString) {
         const char = strArray[i];
 
         if (isUpperCase(char)) {
-            // Swap current character with the character at capitalInde
+            // Swap current character with the character at capitalIndex
             [strArray[i], strArray[capitalIndex]] = [strArray[capitalIndex], strArray[i]];
             capitalIndex++;
         } else if (isLowerCase(char)) {
@@ -23,6 +23,7 @@ function inPlaceOrder(inputString) {
 }
 
 function isUpperCase(char) {
+    console.log(char,'A')
     return char >= 'A' && char <= 'Z';
 }
 
