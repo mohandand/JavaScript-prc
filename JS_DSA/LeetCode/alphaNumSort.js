@@ -1,38 +1,25 @@
-function inPlaceOrder(inputString) {
-    const strArray = Array.from(inputString);
-
-    let capitalIndex = 0;
-    let lowercaseIndex = 0;
-
-    for (let i = 0; i < strArray.length; i++) {
-        const char = strArray[i];
-
-        if (isUpperCase(char)) {
-            // Swap current character with the character at capitalIndex
-            [strArray[i], strArray[capitalIndex]] = [strArray[capitalIndex], strArray[i]];
-            capitalIndex++;
-        } else if (isLowerCase(char)) {
-            // Swap current character with the character at lowercaseIndex
-            [strArray[i], strArray[lowercaseIndex]] = [strArray[lowercaseIndex], strArray[i]];
-            lowercaseIndex++;
-        }
-        // For numbers, leave them in their place
+function customSort(a, b) {
+    const getTypeOrder = (char) => {
+      if (/[A-Z]/.test(char)) return 0; // Capitals
+      if (/[a-z]/.test(char)) return 1; // Small letters
+      if (/[0-9]/.test(char)) return 2; // Numbers
+      //return 3; // Other characters
+    };
+  
+    const typeOrderA = getTypeOrder(a);
+    const typeOrderB = getTypeOrder(b);
+  
+    if (typeOrderA !== typeOrderB) {
+      return typeOrderA - typeOrderB;
+    } else {
+      // Same type, use default order
+      return 0;
     }
-
-    return strArray.join('');
-}
-
-function isUpperCase(char) {
-    console.log(char,'A')
-    return char >= 'A' && char <= 'Z';
-}
-
-function isLowerCase(char) {
-    return char >= 'a' && char <= 'z';
-}
-
-// Example usage:
-const inputString = "abA30aCaB1";
-const orderedString = inPlaceOrder(inputString);
-
-console.log(orderedString);
+  }
+  
+  // Example usage with Array.prototype.sort()
+  const inputString = "baA30aCaB1";
+  const sortedString = inputString.split('').sort(customSort).join('');
+  
+  console.log(sortedString); // Output: ACBabaa301
+  
