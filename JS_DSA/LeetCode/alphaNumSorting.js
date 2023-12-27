@@ -4,9 +4,9 @@ const inputStringArray = inputString.split('');
 function sortAlpha(inputStringArray){
     inputStringArray.sort((a,b) => {
         const getTypeOrder = (char) => {
-            if(/A-Z/.test(char)) return 0;
-            if(/a-z/.test(char)) return 1;
-            if(/0-0/.test(char)) return 2;
+            if(/[A-Z]/.test(char)) return 0;
+            if(/[a-z]/.test(char)) return 1;
+            if(/[0-9]/.test(char)) return 2;
         }
         const typeOrderA = getTypeOrder(a);
         const typeOrderB = getTypeOrder(b);
