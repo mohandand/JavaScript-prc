@@ -9,6 +9,7 @@ var numSubarrayProductLessThanK = function(nums, k) {
             left++;
         }
         // Collect the subarrays
+		console.log(subarrays);
         for (let i = right; i >= left; i--) {
             const subarray = nums.slice(i, right + 1);
             subarrays.push(subarray);
