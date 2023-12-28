@@ -1,5 +1,4 @@
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
 function sortDate(dateArray){
     dateArray.sort((a,b) => {
         let [day1, month1, year1] = a.split(" ");

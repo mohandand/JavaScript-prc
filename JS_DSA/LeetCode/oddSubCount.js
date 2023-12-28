@@ -1,22 +1,22 @@
-function oddSubCount(arr,k){
-    let res=0; oddcount=0, left=0;
-    for(let right=0;right<arr.length;right++){
-        if(arr[right]%2 !== 0){
-            oddcount++
+function evenSubarray(numbers, k) {
+    let result = 0 ,oddCount = 0,left = 0;
+    for (let right = 0; right < numbers.length; right++) {
+        if (numbers[right] % 2 !== 0) {
+            oddCount++;
         }
-        while(oddSubCount>k){
-            if(arr[left] % 2 !== 0){
-                oddcount--
+        while (oddCount > k) {
+            if (numbers[left] % 2 !== 0) {
+                oddCount--;
             }
             left++;
         }
-
-        res += right-left+1
+        result += right - left + 1;
     }
-    return res;
+    return result;
 }
+
 // Example usage:
 const numbers = [1, 2, 3, 4];
 const k = 1;
-const distinctSubarrays = oddSubCount(numbers, k);
+const distinctSubarrays = evenSubarray(numbers, k);
 console.log(distinctSubarrays);
