@@ -4,6 +4,7 @@ function preprocessDate(dates) {
         const dayWithoutSuffix = day.slice(0, -2);
         // Create a Date object to handle month conversion
         const dateObj = new Date(`${month} ${dayWithoutSuffix}, ${year}`);
+        console.log(dateObj);
         // Get the formatted date components
         const formattedYear = dateObj.getFullYear();
         const formattedMonth = String(dateObj.getMonth() + 1).padStart(2, '0');
@@ -12,7 +13,7 @@ function preprocessDate(dates) {
         return `${formattedYear}-${formattedMonth}-${formattedDay}`;
     });
 }
-// Example usage:
+//Example usage:
 const inputDates = ['1st Mar 1974', '22nd Jan 2013', '7th Apr 1904'];
 const convertedDates = preprocessDate(inputDates);
 console.log(convertedDates);
