@@ -1,6 +1,5 @@
 function triangleType(triangleToys) {
     const result = [];
-
     for (const toy of triangleToys) {
         const sides = toy.split(' ').map(Number);
 
