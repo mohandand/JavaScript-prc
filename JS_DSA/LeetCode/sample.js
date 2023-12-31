@@ -1,16 +1,22 @@
-function validAn(w1, w2){
-    let obj1 = {};
-    for(let i=0;i<w1.length;i++){
-        obj1[w1[i]] ? obj1[w1[i]]++ :  obj1[w1[i]]=1
-    }
-    for(let char in w2){
-        if(obj1[w2[char]]){
-            obj1[w2[char]]--
+function adjRem(str,k){
+    let stack = [];
+    for(let i=0;i<str.length;i++){
+        let current=s[i];
+        let peek = stack[stack.length-1]
+        if( stack.length === 0 || peek[0] !== current){
+            stack.push([current, 1])
         } else {
-            return false;
+            peek[1]++
+            if(peek[1]>k){
+                stack.pop();
+            }
         }
     }
-   return Object.values(obj1).every(val => val===0)
+  let res =''
+    for(let [char, count] of stack){
+        res = res + char.repeat(count)
+    }
+    return res;
 }
 
-console.log(validAn("baat", "taab"))
+console.log(adjRem("deeedbbcccbdaa",3))
