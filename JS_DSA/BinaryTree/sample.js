@@ -22,7 +22,6 @@ b.right = e;
 
 console.log(a)
 function inverttree(root){
-    if(!root) return [];
     let stack = [root];
     while(stack.length>0){
         let current = stack.pop();
@@ -34,4 +33,4 @@ function inverttree(root){
     console.log(a)
 }
 
-console.log(inverttree(a));
+console.log(inverttree(a))
