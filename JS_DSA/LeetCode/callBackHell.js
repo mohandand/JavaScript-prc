@@ -26,3 +26,41 @@ step1(() => {
         })
     })
 })
+
+//Solution using Promise
+
+function pStep1(){
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            console.log("promise step1 completed")
+            resolve();
+        },1000)
+    })
+}
+
+function pStep2(){
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            console.log("promise step2 completed")
+            resolve();
+        },1000)
+    })
+}
+
+function pStep3(){
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            console.log("promise step3 completed")
+            resolve();
+        })
+    })
+}
+
+pStep1()
+.then(() => {pStep2()})
+.then(() => {pStep3()})
+.catch(error => {
+    console.log("an error occured")
+})
+
+
