@@ -10,12 +10,12 @@ function balPar(str){
         stack.push(str[i])
        } else {
         const topStack = stack.pop();
-        if(topStack !== obj[str[i]]){
-            return false;
-        }
+       if(obj[topStack] !== str[i]){
+        return false
+       }
        }
     }
     return true
 }
 
-console.log(balPar("({[]})"))
+console.log(balPar("(({[]}))"))
