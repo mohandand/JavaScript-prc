@@ -6,3 +6,4 @@ function* generatorFun(){
 let iternator = generatorFun();
 console.log(iternator.next());
 console.log(iternator.next());
+console.log(iternator.next());
