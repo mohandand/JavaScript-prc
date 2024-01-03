@@ -15,11 +15,14 @@
     margin-bottom: 2px;
 }
 .options-container{
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 30%;
     padding:1px;
     border: 1px solid black;
     border-radius: 5px;
     align-items:center;
+}
+.show{
+    display: flex
 }
