@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:20px;
+    width:60%
+}
+.select-button{
+    width: 30%;
+    padding:10px;
+    margin-bottom: 2px;
+}
+.options-container{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding:1px;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-items:center;
+}
