@@ -10,3 +10,12 @@ window.addEventListener('click', (event) => {
         optionsContainer.classList.remove('show');
     }
 })
+
+const options = document.querySelectorAll(`input[type="checkbox"]`);
+
+options.forEach((checkbox) => {
+    checkbox.addEventListener('change',() => {
+        let selectedItems = Array.from(options).filter((c) => c.checked).map((c) =>  c.value)
+        buttonElement.innerText = selectedItems.length>0 ? selectedItems.join('') : "Select Options"
+    })
+})
