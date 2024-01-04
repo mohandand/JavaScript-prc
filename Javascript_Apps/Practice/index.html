@@ -1,6 +1,28 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
+        <style>
+            .container{
+                display: flex;
+                flex-direction:column;
+                justify-content: center;
+                margin: 0 auto;
+                border: 1px solid black;
+                width:50%
+            }
+            .sample{
+                width: 30px;
+                height: 40px;
+                border:1px solid black;
+            }
+        </style>
     </head>
-    <body></body>
+    <body>
+        <div class="container">
+            <h2 style="color: blue; font-weight: 100px;">Practise</h2>
+            <button class="my-button" onClick="changeBackGround('option-1')">Click Me</button>
+            <div class="sample"></div>
+        </div>
+    </body>
+    <script src="script.js"></script>
 </html>
