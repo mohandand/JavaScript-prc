@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:20px;
+    width:60% 
+}
+.title{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:20px;
+    width:60%; 
+    margin-bottom: 1px; 
+}
+.content{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding:20px;
+    width:60%; 
+    margin-bottom: 8px;
+    display: none; 
+}
+.show{
+    display: block;
+}
