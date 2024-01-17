@@ -1,5 +1,5 @@
 let ar =[1,2,3,3,4];
 
-let uar  =new Set([...ar]);
+let uarr  =new Set([...ar]);
 
-console.log([...uar].length)
+console.log([...uarr].length)
