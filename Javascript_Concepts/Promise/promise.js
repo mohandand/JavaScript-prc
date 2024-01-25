@@ -1,8 +1,8 @@
-function readFile(cb){
+function readFile(){
     return new  Promise((resolve,reject) => {
         setTimeout(() => {
             console.log("Read File Completed");
-            cb();
+            resolve();
         },1000)
     })
 }
@@ -10,7 +10,7 @@ function writeFile(cb){
     return new  Promise((resolve,reject) => {
         setTimeout(() => {
             console.log("Write File Completed");
-            cb();
+            resolve();
         },1000)
     })
 }
@@ -19,7 +19,7 @@ function uploadFile(cb){
     return new  Promise((resolve,reject) => {
         setTimeout(() => {
             console.log("Upload File Completed");
-            cb();
+            resolve();
         },1000)
     })
 }
