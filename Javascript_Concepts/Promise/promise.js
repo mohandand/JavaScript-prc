@@ -25,7 +25,7 @@ function uploadFile(cb){
 }
 
 readFile()
-.then(() => processFile())
+.then(() => writeFile())
 .then(() => uploadFile())
 .then(()=> {console.log("process completed")})
 .catch((error) => console.log(error))
